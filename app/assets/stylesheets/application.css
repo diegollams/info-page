@@ -10,6 +10,32 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+
  *= require_tree .
  *= require_self
+
  */
+.vertical-center {
+    min-height: 60%;
+    min-height: 60vh;
+    display: flex;
+    /*align-items: center;*/
+    justify-content: center;
+    flex-direction: column;
+    display: -webkit-flex; /* For Safari */
+    -webkit-justify-content: center; /* For Safari */
+    -webkit-align-items: center; /* For Safari */
+}
+.icon{
+    display: inline;
+    width: 50px;
+}
+
+.icon:hover{
+    display: inline;
+    width: 70px;
+}
+
+span.break {
+    display: inline-block;
+}

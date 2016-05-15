@@ -1,0 +1,17 @@
+/*
+  =require twitter-bootstrap-static/bootstrap
+
+  Use Font Awesome icons (default)
+  To use Glyphicons sprites instead of Font Awesome, replace with "require twitter-bootstrap-static/sprites"
+
+  */
+
+.vertical-align {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+  .progress {background: rgba(245, 245, 245, 1); border: 3px solid rgba(245, 245, 245, 1); border-radius: 4px; height: 10px;}
+.progress-bar-custom {background: rgba(66, 139, 202, 1);}
+

@@ -12,5 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require turbolinks
+//= require react
+//= require react_ujs
+//= require components
 //= require_tree .
+
+var loadToolptip = function(){
+    $('[data-toggle="tooltip"]').tooltip();
+};
+
+$(document).on('page:load ready page:change', loadToolptip);
+// $(document).on('ready',tooltips);
+
