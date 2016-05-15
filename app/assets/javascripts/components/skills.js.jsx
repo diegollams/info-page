@@ -6,7 +6,8 @@ var Skills = React.createClass({
         this.setState({skills: !this.state.skills});
     },
    render: function () {
-       var skills = null,images = null,toggleButton = null,toggleMessage;
+       var skills = null,images = null,toggleButton = null,toggleMessage = this.state.skills ? "Contact" : 'Skills';
+       toggleButton = <button onClick={this.showSkills} className="btn btn-primary" data-placement="right" data-toggle="tooltip" title="Click for info">{toggleMessage}</button>;
        var skillsArray = [{name: 'Ruby on Rails',percentage: 80,image: this.props.images.rails},{name: 'Javascript',percentage: 80,image: this.props.images.js},{name: 'ReactJs',percentage: 80,image: this.props.images.reactjs},{name: 'Android',percentage: 90,image: this.props.images.android},{name: 'C++',percentage: 70,image: this.props.images.cplusplus},{name: 'Swift',percentage: 60,image: this.props.images.swift}];
        if(this.state.skills){
            skills =
@@ -19,8 +20,9 @@ var Skills = React.createClass({
                                    </div>
                                </div>
                    }.bind(this))}
+                   {toggleButton}
                </div>;
-           toggleMessage = "Contact";
+
        }else{
            images = <ul className="list-inline">
                <li data-placement="left" data-toggle="tooltip" title="Projects">
@@ -28,15 +30,16 @@ var Skills = React.createClass({
                        <img className="icon" src={this.props.images.github}/>
                    </a>
                </li>
-               <li data-placement="right" data-toggle="tooltip" title="Resume">
+               <li data-placement="bottom" data-toggle="tooltip" title="Resume">
                    <a href="https://mx.linkedin.com/in/diegollamas">
                        <img className="icon" src={this.props.images.linkedin}/>
                    </a>
                </li>
+               <li>{toggleButton}</li>
            </ul>;
-           toggleMessage = "Skills";
+
        }
-       toggleButton = <button onClick={this.showSkills} className="btn btn-primary" data-placement="bottom" data-toggle="tooltip" title="Click for info">{toggleMessage}</button>;
+
 
        return (
            <div>
@@ -49,7 +52,7 @@ var Skills = React.createClass({
                    </h1>
                    {images}
                    {skills}
-                   {toggleButton}
+
                </header>
 
            </div>
